@@ -30,5 +30,7 @@
     "url": "https://github.com/rzr/iotjs-express/issues"
   },
   "homepage": "https://github.com/rzr/iotjs-express#readme",
-  "devDependencies": {}
+  "devDependencies": {
+    "eslint": "^5.14.1"
+  }
 }
