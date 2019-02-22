@@ -1,0 +1,34 @@
+{
+  "name": "iotjs-express",
+  "version": "0.0.0",
+  "description": "Basic reimplementation of Express.js for IoT.js or Node",
+  "main": "index.js",
+  "scripts": {
+    "start": "node example"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rzr/iotjs-express.git"
+  },
+  "keywords": [
+    "API",
+    "REST",
+    "RESTful",
+    "express",
+    "http",
+    "httpd",
+    "iot",
+    "iotjs",
+    "iotjs-module",
+    "iotjs-supported",
+    "webservice",
+    "WoT"
+  ],
+  "author": "Philippe Coval <p.coval@samsung.com> (https://www.npmjs.com/~rzr)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rzr/iotjs-express/issues"
+  },
+  "homepage": "https://github.com/rzr/iotjs-express#readme",
+  "devDependencies": {}
+}
