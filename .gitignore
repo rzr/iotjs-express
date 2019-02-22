@@ -1,3 +1,6 @@
 *~
 *.tmp
-/tnp/
+**/iotjs_modules/
+**/node_modules/
+/tmp/
+
