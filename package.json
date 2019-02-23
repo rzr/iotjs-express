@@ -4,6 +4,7 @@
   "description": "Basic reimplementation of Express.js for IoT.js or Node",
   "main": "index.js",
   "scripts": {
+    "lint": "eslint .",
     "start": "node example"
   },
   "repository": {
@@ -29,8 +30,11 @@
   "bugs": {
     "url": "https://github.com/rzr/iotjs-express/issues"
   },
-  "homepage": "https://github.com/rzr/iotjs-express#readme",
+  "homepage": "https://libraries.io/npm/iotjs-express",
   "devDependencies": {
     "eslint": "^5.14.1"
+  },
+  "iotjs": {
+    "version": ">=1.0"
   }
 }
