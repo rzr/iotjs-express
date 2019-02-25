@@ -1,6 +1,6 @@
 # IOTJS-EXPRESS #
 
-[![GitHub forks](https://img.shields.io/github/forks/rzr/iotjs-express.svg?style=social&label=Fork&maxAge=2592000)](https://GitHub.com/rzr/iotjs-express/network/)
+[![GitHub forks](https://img.shields.io/github/forks/SamsungInternet/iotjs-express.svg?style=social&label=Fork&maxAge=2592000)](https://GitHub.com/SamsungInternet/iotjs-express/network/)
 [![license](https://img.shields.io/badge/license-MIT-0.svg)](MIT)
 [![NPM](https://img.shields.io/npm/v/iotjs-express.svg)](https://www.npmjs.com/package/iotjs-express)
 [![IRC Channel](https://img.shields.io/badge/chat-on%20freenode-brightgreen.svg)](https://kiwiirc.com/client/irc.freenode.net/#tizen)
@@ -30,7 +30,7 @@ which can be used by both runtime Node.Js and IoT.js.
 
 ```sh
 mkdir iotjs_modules
-git clone https://github.com/rzr/iotjs-express iotjs_modules/iotjs-express 
+git clone https://github.com/SamsungInternet/iotjs-express iotjs_modules/iotjs-express
 cd iotjs_modules/iotjs-express
 iotjs example &
 

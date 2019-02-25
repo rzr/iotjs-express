@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/rzr/iotjs-express.git"
+    "url": "https://github.com/SamsungInternet/iotjs-express.git"
   },
   "keywords": [
     "API",
@@ -28,7 +28,7 @@
   "author": "Philippe Coval <p.coval@samsung.com> (https://www.npmjs.com/~rzr)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/rzr/iotjs-express/issues"
+    "url": "https://github.com/SamsungInternet/iotjs-express/issues"
   },
   "homepage": "https://libraries.io/npm/iotjs-express",
   "devDependencies": {
