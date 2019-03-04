@@ -5,9 +5,16 @@
 
 default: help iotjs/run
 
+project?=iotjs-express
 example?=example/index.js
 eslint_file?=node_modules/eslint/bin/eslint.js
 runtime?=iotjs
+
+deploy_dir ?= ${CURDIR}/tmp/deploy
+deploy_modules_dir ?= ${deploy_dir}/iotjs_modules
+deploy_module_dir ?= ${deploy_modules_dir}/${project}
+deploy_srcs += ${deploy_module_dir}/lib/express.js
+deploy_srcs += ${deploy_module_dir}/index.js
 
 help:
 	@echo "Usage:"
@@ -46,3 +53,11 @@ iotjs/run: ${example}
 
 iotjs/debug: ${example}
 	node $<
+
+${deploy_module_dir}/%: %
+	@echo "# TODO: minify: $<"
+	install -d ${@D}
+	install $< $@
+
+deploy: ${deploy_srcs}
+	ls $<
