@@ -3,7 +3,8 @@
 # SPDX-License-Identifier: MIT
 # Copyright: 2018-present Samsung Electronics France SAS, and contributors
 
-default: help iotjs/run
+default: help iotjs/start
+	@echo "# $@: $^"
 
 project?=iotjs-express
 example?=example/index.js
@@ -18,9 +19,9 @@ deploy_srcs += ${deploy_module_dir}/index.js
 
 help:
 	@echo "Usage:"
-	@echo "# make run"
+	@echo "# make start"
 
-node/run: ${example}
+node/start: ${example}
 	node $<
 
 package.json:
@@ -29,10 +30,10 @@ package.json:
 node_modules: package.json
 	npm install
 
-node/run: node_modules
+node/npm/start: node_modules
 	npm start
 
-run: ${runtime}/run
+start: ${runtime}/start
 	@echo "# $@: $^"
 
 cleanall:
@@ -48,7 +49,7 @@ eslint: ${eslint_file} .eslintrc.js
 lint: eslint
 	@echo "# $@: $^"
 
-iotjs/run: ${example}
+iotjs/start: ${example}
 	iotjs $<
 
 iotjs/debug: ${example}
