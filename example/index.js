@@ -28,6 +28,7 @@ if (module.parent === null) {
   }
   var app = new Express();
   var self = http.createServer(app.request);
+  console.log('Listening on:\nhttp://localhost:' + port);
   app.get('/', function(req, res) {
     return res.json({});
   });
