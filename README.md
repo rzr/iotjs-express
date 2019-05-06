@@ -26,7 +26,7 @@ which can be used by both runtime Node.Js and IoT.js.
 [![Presentation](https://image.slidesharecdn.com/webthing-iotjs-20181022rzr-181027220201/95/webthingiotjs20181027rzr-17-638.jpg)](https://www.slideshare.net/rzrfreefr/webthingiotjs20181022rzr-120959360/# "WebThingIotJs")
 
 
-## USAGE USING IOTJS: ##
+## USAGE WITH IOTJS: ##
 
 ```sh
 mkdir iotjs_modules
@@ -61,7 +61,7 @@ curl -X PUT -d '{"value":1984}' http://localhost:8888/db/some-other-key
 [![iotjs_modules](https://image.slidesharecdn.com/webthing-iotjs-tizenrt-cdl2018-20181117rzr-181118110813/95/webthingiotjstizenrtcdl201820181117rzr-24-638.jpg)](https://www.slideshare.net/rzrfreefr/webthingiotjstizenrtcdl201820181117rzr/24 "iotjs_modules")
 
 
-## USAGE USING NODE: ##
+## USAGE WITH NODE: ##
 
 It's mostly the same:
 
@@ -77,7 +77,7 @@ node example
 ## DEMO: ##
 
 In "webthing-iotjs-20180621rzr" video,
-Edison's run a webthing server powered by iotjs-express framework to build routes,
+Edison's running a webthing server powered by iotjs-express framework to build routes,
 (it relies on IoT.js's http module, API is aligned to node)
 
 [![webthing-iotjs-20180621rzr](https://camo.githubusercontent.com/8892251f72dae9fa1c508da8abc33cbc2f6a0e75/68747470733a2f2f732d6f70656e736f757263652e6f72672f77702d636f6e74656e742f75706c6f6164732f323031382f30362f7765627468696e672d696f746a732d3230313830363231727a722e676966#webthing-iotjs-20180621rzr.gif)](https://www.slideshare.net/rzrfreefr/webthingiotjs20181022rzr-120959360/41#webthing-iotjs-20180621rzr "Demo")
@@ -106,3 +106,4 @@ Demo also shows following systems:
 * https://github.com/rzr/webthing-iotjs/wiki
 * https://libraries.io/npm/iotjs-express
 * https://github.com/pando-project/iotjs-modules/pull/16# (Merged)
+* https://github.com/runtimejs/runtime/issues/151# (Open)
