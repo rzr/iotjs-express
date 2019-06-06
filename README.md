@@ -93,6 +93,7 @@ Demo also shows following systems:
 
 ## RESOURCES: ##
 
+* https://glitch.com/edit/#!/samsunginternet-iotjs-express
 * http://expressjs.com/
 * https://www.npmjs.com/package/express
 * https://en.wikipedia.org/wiki/Express.js
