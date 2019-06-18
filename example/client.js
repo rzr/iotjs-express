@@ -56,9 +56,12 @@ if (module.parent === null) {
 
   http.request(options, function (res) {
     receive(res, function (data) {
-      console.log(data);
-      var object = JSON.parse(data);
-      console.log(JSON.stringify(object));
+      try {
+        var object = JSON.parse(data);
+        console.log(JSON.stringify(object));
+      } catch (err) {
+        console.log(data);
+      }
     });
   }).end();
 }
