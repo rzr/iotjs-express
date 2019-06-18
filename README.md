@@ -91,9 +91,20 @@ Demo also shows following systems:
 * Galaxy note: SamsungInternet web browser for Android.
 
 
+## EXAMPLES: ##
+
+``sh
+iotjs example/client.js 8888 localhost /.well-known/security.txt
+Contact: https://www.npmjs.com/~rzr
+``
+
+An extra example is added to show how to make a bridge from HTTP/REST to MQTT.
+
+
 ## RESOURCES: ##
 
 * https://glitch.com/edit/#!/samsunginternet-iotjs-express
+* https://samsunginternet-iotjs-express.glitch.me/.well-known/security.txt
 * http://expressjs.com/
 * https://www.npmjs.com/package/express
 * https://en.wikipedia.org/wiki/Express.js
