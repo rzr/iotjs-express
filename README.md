@@ -32,7 +32,8 @@ which can be used by both runtime Node.Js and IoT.js.
 mkdir iotjs_modules
 git clone https://github.com/SamsungInternet/iotjs-express iotjs_modules/iotjs-express
 cd iotjs_modules/iotjs-express
-iotjs example &
+make start &
+#| iotjs example
 
 curl -i http://localhost:8888/.well-known/security.txt
 #| HTTP/1.1 200 OK
@@ -56,6 +57,10 @@ curl -X PUT -d '{"value":42}' http://localhost:8888/db/some-key
 curl -X PUT -d '{"value":1984}' http://localhost:8888/db/some-other-key
 #| {"some-key":42,"some-other-key":1984}
 
+curl -i  http://localhost:8888/static/README.md  
+#| HTTP/1.1 200 OK
+#| # IOTJS-EXPRESS #
+#| (...)
 ```
 
 [![iotjs_modules](https://image.slidesharecdn.com/webthing-iotjs-tizenrt-cdl2018-20181117rzr-181118110813/95/webthingiotjstizenrtcdl201820181117rzr-24-638.jpg)](https://www.slideshare.net/rzrfreefr/webthingiotjstizenrtcdl201820181117rzr/24 "iotjs_modules")
@@ -70,7 +75,9 @@ npm install iotjs_express
 cd node_modules/iotjs-express
 npm start
 # Or:
-node example
+make start runtime=node
+#| node example
+
 ```
 
 
@@ -105,6 +112,7 @@ An extra example is added to show how to make a bridge from HTTP/REST to MQTT.
 
 * https://glitch.com/edit/#!/samsunginternet-iotjs-express
 * https://samsunginternet-iotjs-express.glitch.me/.well-known/security.txt
+* https://www.npmjs.com/browse/depended/iotjs-express
 * http://expressjs.com/
 * https://www.npmjs.com/package/express
 * https://en.wikipedia.org/wiki/Express.js
