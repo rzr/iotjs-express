@@ -1,3 +1,8 @@
-**/iotjs_modules/**
-**/node_modules/**
-tmp/
+#. eslintignore
+# .gitignore
+*~
+*.tmp
+**/iotjs_modules
+**/node_modules
+/tmp/
+npm-debug.log
