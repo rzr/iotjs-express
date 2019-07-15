@@ -10,6 +10,7 @@
  */
 
 var console = require('console');
+var fs = require('fs');
 
 var Express = null;
 try {
@@ -46,6 +47,16 @@ if (module.parent === null) {
 
   app.get('/~:user', function(req, res) {
     return res.json({user: req.params.user});
+  });
+
+  app.get('/static/:filename', function(req, res) {
+    fs.readFile(req.params.filename, function(err, data) {
+      if (err) {
+        throw err;
+      }
+
+      return res.end(data);
+    });
   });
 
   self.listen(port);
