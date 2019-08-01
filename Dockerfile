@@ -55,6 +55,7 @@ RUN echo "#log: Install iotjs" \
 iotjs-snapshot="$version" iotjs="$version" \
   && which iotjs \
   && iotjs -h || echo "log: iotjs's usage expected to be printed before" \
+  && apt-get clean \
   && sync
 
 ENV project iotjs-express
