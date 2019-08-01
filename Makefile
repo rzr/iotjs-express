@@ -4,7 +4,7 @@
 # Copyright: 2018-present Samsung Electronics France SAS, and contributors
 
 default: help
-	@echo "# $@: $^"
+	@echo "# log: $@: $^"
 
 project?=iotjs-express
 example?=example/index.js
@@ -18,7 +18,7 @@ deploy_srcs += ${deploy_module_dir}/lib/express.js
 deploy_srcs += ${deploy_module_dir}/index.js
 
 help:
-	@echo "Usage:"
+	@echo "## Usage:"
 	@echo "# make start"
 
 node/start: ${example}
@@ -34,10 +34,10 @@ node/npm/start: node_modules
 	npm start
 
 start: ${runtime}/start
-	@echo "# $@: $^"
+	@echo "# log: $@: $^"
 
 run: start
-	@echo "# $@: $^"
+	@echo "# log: $@: $^"
 
 cleanall:
 	rm -rf iotjs_modules node_modules
@@ -50,7 +50,7 @@ eslint: ${eslint_file} .eslintrc.js
 	${eslint_file} --no-color .
 
 lint: eslint
-	@echo "# $@: $^"
+	@echo "# log:  $@: $^"
 
 iotjs/start: ${example}
 	iotjs $<
@@ -69,7 +69,7 @@ deploy: ${deploy_srcs}
 
 check/runtime/%:
 	@iotjs -h 2>&1 | grep -o 'Usage: ${@F}' > /dev/null
-	@echo "# $@: $^"
+	@echo "# log: $@: $^"
 
 check: check/runtime/${runtime}
-	@echo "# $@: $^"
+	@echo "# log: $@: $^"
