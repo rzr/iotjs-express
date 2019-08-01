@@ -1,6 +1,6 @@
 {
   "name": "iotjs-express",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Basic reimplementation of Express.js for IoT.js or Node",
   "main": "index.js",
   "scripts": {
