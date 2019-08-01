@@ -5,9 +5,9 @@
 [![Build Status](https://travis-ci.org/rzr/iotjs-express.svg?branch=master)](https://travis-ci.org/rzr/iotjs-express)
 [![NPM](https://img.shields.io/npm/v/iotjs-express.svg)](https://www.npmjs.com/package/iotjs-express)
 [![IRC Channel](https://img.shields.io/badge/chat-on%20freenode-brightgreen.svg)](https://kiwiirc.com/client/irc.freenode.net/#tizen)
-![Docker Pulls](https://img.shields.io/docker/pulls/rzr/iotjs-express.svg)
-![Automated Builds](https://img.shields.io/docker/automated/rzr/iotjs-express.svg)
-![Build Status](https://img.shields.io/docker/build/rzr/iotjs-express.svg)
+![Docker Pulls](https://img.shields.io/docker/pulls/rzrfreefr/iotjs-express.svg)
+![Automated Builds](https://img.shields.io/docker/automated/rzrfreefr/iotjs-express.svg)
+![Build Status](https://img.shields.io/docker/build/rzrfreefr/iotjs-express.svg)
 
 [![NPM](https://nodei.co/npm/iotjs-express.png)](https://npmjs.org/package/iotjs-express)
 
@@ -87,10 +87,15 @@ make start runtime=node
 ## USAGE WITH DOCKER: ##
 
 ```sh
-docker-compose up
-
+docker run --net host rzrfreefr/iotjs-express:latest
 curl http://localhost:8888/.well-known/security.txt
 #| Contact: https://www.npmjs.com/~rzr
+
+# Or from sources
+docker-compose up
+curl http://localhost:8888/.well-known/security.txt
+#| Contact: https://www.npmjs.com/~rzr
+
 ```
 
 
