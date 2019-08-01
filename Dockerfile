@@ -63,6 +63,8 @@ WORKDIR /usr/local/opt/${project}/src/${project}/
 RUN echo "#log: ${project}: Preparing sources" \
   && set -x \
   && make help \
+  && make \
+  && make check \
   && sync
 
 EXPOSE 8888
