@@ -2,8 +2,12 @@
 
 [![GitHub forks](https://img.shields.io/github/forks/SamsungInternet/iotjs-express.svg?style=social&label=Fork&maxAge=2592000)](https://GitHub.com/SamsungInternet/iotjs-express/network/)
 [![license](https://img.shields.io/badge/license-MIT-0.svg)](MIT)
+[![Build Status](https://travis-ci.org/rzr/iotjs-express.svg?branch=master)](https://travis-ci.org/rzr/iotjs-express)
 [![NPM](https://img.shields.io/npm/v/iotjs-express.svg)](https://www.npmjs.com/package/iotjs-express)
 [![IRC Channel](https://img.shields.io/badge/chat-on%20freenode-brightgreen.svg)](https://kiwiirc.com/client/irc.freenode.net/#tizen)
+![Docker Pulls](https://img.shields.io/docker/pulls/rzr/iotjs-express.svg)
+![Automated Builds](https://img.shields.io/docker/automated/rzr/iotjs-express.svg)
+![Build Status](https://img.shields.io/docker/build/rzr/iotjs-express.svg)
 
 [![NPM](https://nodei.co/npm/iotjs-express.png)](https://npmjs.org/package/iotjs-express)
 
@@ -80,6 +84,15 @@ make start runtime=node
 
 ```
 
+## USAGE WITH DOCKER: ##
+
+```sh
+docker-compose up
+
+curl http://localhost:8888/.well-known/security.txt
+#| Contact: https://www.npmjs.com/~rzr
+```
+
 
 ## DEMO: ##
 
@@ -98,12 +111,12 @@ Demo also shows following systems:
 * Galaxy note: SamsungInternet web browser for Android.
 
 
-## EXAMPLES: ##
+## EXTRA EXAMPLES: ##
 
-``sh
+```sh
 iotjs example/client.js 8888 localhost /.well-known/security.txt
 Contact: https://www.npmjs.com/~rzr
-``
+```
 
 An extra example is added to show how to make a bridge from HTTP/REST to MQTT.
 
