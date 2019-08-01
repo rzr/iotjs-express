@@ -98,6 +98,37 @@ curl http://localhost:8888/.well-known/security.txt
 
 ```
 
+## USAGE WITH K3S: ##
+
+```sh
+project="iotjs-express"
+image="rzrfreefr/${project}:latest"
+kubectl="sudo kubectl"
+
+sudo sync
+sudo snap remove microk8s
+curl -sfL https://get.k3s.io | sh - # v0.7.0
+sudo systemctl restart k3s.service || sudo systemctl status k3s.service
+
+$kubectl get nodes # Wait "Ready state"
+#| {host}   NotReady   master   5s    v1.14.4-k3s.1
+#| (...)
+#| {host}   Ready    master   51s   v1.14.4-k3s.1
+
+$kubectl run "${project}" --image="${image}"
+
+$kubectl get all --all-namespaces | grep "$project"
+#| default       pod/iotjs-express-..........-.....   1/1     Running     0          ..s
+
+pod=$($kubectl get all --all-namespaces \
+  | grep -o "pod/${project}.*" | cut -d/ -f2 | awk '{ print $1}' \
+  || echo failure) && echo pod="$pod"
+$kubectl describe pod "$pod"  | grep 'Status:             Running'
+ip=$($kubectl describe pod "$pod" | grep 'IP:' | awk '{ print $2 }') && echo "ip=${ip}"
+
+curl http://$ip:8888/.well-known/security.txt
+```
+
 
 ## DEMO: ##
 
