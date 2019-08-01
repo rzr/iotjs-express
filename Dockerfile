@@ -10,7 +10,7 @@
 # https://spdx.org/licenses/MIT.html
 #}
 
-FROM debian:9
+FROM debian:10
 MAINTAINER Philippe Coval (p.coval@samsung.com)
 
 ENV DEBIAN_FRONTEND noninteractive
@@ -42,6 +42,7 @@ RUN echo "#log: Install iotjs" \
   && . /etc/os-release \
   && distro="${ID}_${VERSION_ID}" \
   && [ "debian" != "${ID}" ] || distro="${distro}.0" \
+  && [ "debian_10.0" != "$distro" ] || distro="${ID}_${VERSION_ID}" \
   && distro=$(echo "${distro}" | sed 's/.*/\u&/') \
   && [ "ubuntu" != "${ID}" ] || distro="x${distro}" \
   && url="http://download.opensuse.org/repositories/home:/rzrfreefr:/snapshot/$distro" \
