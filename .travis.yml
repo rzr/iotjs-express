@@ -1,0 +1,14 @@
+sudo: required
+language: node_js
+dist: trusty
+services: docker
+script:
+- docker build .
+deploy:
+  provider: npm
+  email: rzr@users.sf.net
+  api_key:
+    secure: "esDKFKTQAYZ79Zx2+eDGxUCKpfPs3eBzkUQUOkBVISsIAv9C22zJntWia5B50WPf07lhO1SE3/Oe2AXKGmii72/DHef0y+owFxjjrZumHMLWjf34tozr9u0WNezUehirndIeZkr8ajvOP7W4xuIePyfLn0tYp3V7wG9HGBN4ZRvBI1vLF1gAZdDFJ1gjaw+p6By+RfLWo9QnwwpNitZF9x8YNiTIQYU1H0XV+L2E+eb2z9GcQVRq5DiyOVoENkFhb8CS64m0PPPvfcEAan2E/eAmeMnfi1z0FVbiVB9rLSM9O5sCEPnbBHzKTBMCre21tJFoqVPFX98lgImKFn8zMBlIHCS439cOHAnz9HFVb58xYRM0POEjI+sl80+WoLO0GrFC38D9Ksxe7zkrEjulH+6/O1b0fWPCzFHhJPynOvIdlcFANaiuKTm2SW+PEGMeO8uPEgZh3z6w4H33iXOP7GrfM/124RXZU1emcSdwZ/L4Q9p+4hsbA+TgnW/GrAViqBnV+IZXliRByYFZ0qn2HUtxMXU4Adailit3nj0blG88cnuBB3Ljozr1NY3tRPOPhd9KWW8dhJQ0NwJYAwgy1M2G++MedZOYRdBAKoN104iXXxnT7HoyL1id38U5cnfmoeqPiyKawhsXhCJ0Pzsy9QfCHeNtSAQFXJio0CqXK7E="
+  on:
+    tags: true
+    repo: rzr/iotjs-express
