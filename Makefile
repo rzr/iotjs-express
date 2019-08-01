@@ -3,7 +3,7 @@
 # SPDX-License-Identifier: MIT
 # Copyright: 2018-present Samsung Electronics France SAS, and contributors
 
-default: help iotjs/start
+default: help
 	@echo "# $@: $^"
 
 project?=iotjs-express
@@ -36,6 +36,9 @@ node/npm/start: node_modules
 start: ${runtime}/start
 	@echo "# $@: $^"
 
+run: start
+	@echo "# $@: $^"
+
 cleanall:
 	rm -rf iotjs_modules node_modules
 
@@ -54,6 +57,7 @@ iotjs/start: ${example}
 
 iotjs/debug: ${example}
 	node $<
+
 
 ${deploy_module_dir}/%: %
 	@echo "# TODO: minify: $<"
