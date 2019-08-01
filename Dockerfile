@@ -58,14 +58,14 @@ iotjs-snapshot="$version" iotjs="$version" \
   && sync
 
 ENV project iotjs-express
-ADD . /usr/local/${project}/src/${project}
-WORKDIR /usr/local/${project}/src/${project}
+ADD . /usr/local/opt/${project}/src/${project}/
+WORKDIR /usr/local/opt/${project}/src/${project}/
 RUN echo "#log: ${project}: Preparing sources" \
   && set -x \
   && make help \
   && sync
 
 EXPOSE 8888
-WORKDIR /usr/local/${project}/src/${project}
+WORKDIR /usr/local/opt/${project}/src/${project}/
 ENTRYPOINT [ "/usr/bin/make" ]
 CMD [ "start" ]
