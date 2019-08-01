@@ -66,3 +66,10 @@ ${deploy_module_dir}/%: %
 
 deploy: ${deploy_srcs}
 	ls $<
+
+check/runtime/%:
+	@iotjs -h 2>&1 | grep -o 'Usage: ${@F}' > /dev/null
+	@echo "# $@: $^"
+
+check: check/runtime/${runtime}
+	@echo "# $@: $^"
