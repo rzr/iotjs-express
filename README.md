@@ -134,8 +134,34 @@ curl http://localhost:8888/.well-known/security.txt
 docker-compose up
 curl http://localhost:8888/.well-known/security.txt
 #| Contact: https://www.npmjs.com/~rzr
-
 ```
+
+
+## USAGE WITH MINIKUBE: ###
+
+```sh
+
+name="iotjs-express"
+url="https://raw.githubusercontent.com/rzr/iotjs-express/master/extra/tools/kube/$name.yml"
+url=https://raw.githubusercontent.com/rzr/iotjs-express/sandbox/rzr/devel/master/extra/tools/kube/$name.yml
+kubectl=kubectl
+
+minikube version
+
+minikube start || minikube logs --alsologtostderr 
+
+$kubectl version
+
+$kubectl apply -f "${url}"
+#| deployment.extensions/iotjs-express created
+#| service/iotjs-express created
+
+time minikube service ${name} --url
+#| http://192.168.99.102:30080
+time minikube service ${name}
+#| 🎉  Opening kubernetes service default/iotjs-express in default browser...
+```
+
 
 ## USAGE WITH K3S: ##
 
