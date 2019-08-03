@@ -2,8 +2,8 @@ name?=iotjs-express
 
 ${name}.yml: deployment.yml service.yml Makefile
 	@echo "%YAML 1.2" > $@
-	@echo '---'  > $@
+	@echo '---'  >> $@
 	cat deployment.yml >> $@
-	@echo '---'  > $@
+	@echo '---'  >> $@
 	cat service.yml >> $@
-	@echo '---'  > $@
+	@echo '---'  >> $@
