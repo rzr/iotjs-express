@@ -1,4 +1,4 @@
-%YAML 1.2
+#YAML
 ---
 apiVersion: extensions/v1beta1
 kind: Deployment
