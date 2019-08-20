@@ -32,6 +32,11 @@ https://img.shields.io/docker/automated/rzrfreefr/iotjs-express.svg
 ![Build Status](
 https://img.shields.io/docker/build/rzrfreefr/iotjs-express.svg
 )
+[![codebeat badge](
+https://codebeat.co/badges/b9167a25-1c70-4aad-8d32-2a08eb253e6e
+)](
+https://codebeat.co/projects/github-com-rzr-iotjs-express-master
+)
 
 [![NPM](
 https://nodei.co/npm/iotjs-express.png
