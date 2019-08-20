@@ -28,6 +28,7 @@ if (module.parent === null) {
     port = Number(process.argv[2]);
   }
   var app = new Express();
+  app.set('x-powered-by');
   var self = http.createServer(app.request);
   console.log('Listening on:\nhttp://localhost:' + port);
   app.get('/', function(req, res) {
