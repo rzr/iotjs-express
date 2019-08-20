@@ -1,15 +1,43 @@
 # IOTJS-EXPRESS #
 
-[![GitHub forks](https://img.shields.io/github/forks/rzr/iotjs-express.svg?style=social&label=Fork&maxAge=2592000)](https://GitHub.com/rzr/iotjs-express/network/)
-[![license](https://img.shields.io/badge/license-MIT-0.svg)](MIT)
-[![Build Status](https://travis-ci.org/rzr/iotjs-express.svg?branch=master)](https://travis-ci.org/rzr/iotjs-express)
-[![NPM](https://img.shields.io/npm/v/iotjs-express.svg)](https://www.npmjs.com/package/iotjs-express)
-[![IRC Channel](https://img.shields.io/badge/chat-on%20freenode-brightgreen.svg)](https://kiwiirc.com/client/irc.freenode.net/#tizen)
-![Docker Pulls](https://img.shields.io/docker/pulls/rzrfreefr/iotjs-express.svg)
-![Automated Builds](https://img.shields.io/docker/automated/rzrfreefr/iotjs-express.svg)
-![Build Status](https://img.shields.io/docker/build/rzrfreefr/iotjs-express.svg)
+[![GitHub forks](
+https://img.shields.io/github/forks/rzr/iotjs-express.svg?style=social&label=Fork&maxAge=2592000
+)](
+https://GitHub.com/rzr/iotjs-express/network/
+)
+[![license](
+https://img.shields.io/badge/license-MIT-0.svg
+)](MIT)
+[![Build Status](
+https://travis-ci.org/rzr/iotjs-express.svg?branch=master
+)](
+https://travis-ci.org/rzr/iotjs-express
+)
+[![NPM](
+https://img.shields.io/npm/v/iotjs-express.svg
+)](
+https://www.npmjs.com/package/iotjs-express
+)
+[![IRC Channel](
+https://img.shields.io/badge/chat-on%20freenode-brightgreen.svg
+)](
+https://kiwiirc.com/client/irc.freenode.net/#tizen
+)
+![Docker Pulls](
+https://img.shields.io/docker/pulls/rzrfreefr/iotjs-express.svg
+)
+![Automated Builds](
+https://img.shields.io/docker/automated/rzrfreefr/iotjs-express.svg
+)
+![Build Status](
+https://img.shields.io/docker/build/rzrfreefr/iotjs-express.svg
+)
 
-[![NPM](https://nodei.co/npm/iotjs-express.png)](https://npmjs.org/package/iotjs-express)
+[![NPM](
+https://nodei.co/npm/iotjs-express.png
+)](
+https://npmjs.org/package/iotjs-express
+)
 
 
 ## INTRODUCTION: ##
