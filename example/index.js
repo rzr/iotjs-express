@@ -21,7 +21,6 @@ try {
 
 // Main
 if (module.parent === null) {
-  var http = require('http');
   var port = 8888;
   var db = {};
   if (process.argv[2]) {
@@ -29,7 +28,6 @@ if (module.parent === null) {
   }
   var app = new Express();
   app.set('x-powered-by');
-  var self = http.createServer(app.request);
   console.log('Listening on:\nhttp://localhost:' + port);
   app.get('/', function(req, res) {
     return res.json({});
@@ -59,6 +57,5 @@ if (module.parent === null) {
       return res.end(data);
     });
   });
-
-  self.listen(port);
+  app.listen(port);
 }
