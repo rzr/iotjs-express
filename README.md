@@ -23,14 +23,20 @@ https://img.shields.io/badge/chat-on%20freenode-brightgreen.svg
 )](
 https://kiwiirc.com/client/irc.freenode.net/#tizen
 )
-![Docker Pulls](
+[![Docker Pulls](
 https://img.shields.io/docker/pulls/rzrfreefr/iotjs-express.svg
+)](
+https://cloud.docker.com/repository/docker/rzrfreefr/iotjs-express
 )
-![Automated Builds](
+[![Automated Builds](
 https://img.shields.io/docker/automated/rzrfreefr/iotjs-express.svg
+)](
+https://cloud.docker.com/repository/docker/rzrfreefr/iotjs-express/timeline
 )
-![Build Status](
+[![Build Status](
 https://img.shields.io/docker/build/rzrfreefr/iotjs-express.svg
+)](
+https://cloud.docker.com/repository/docker/rzrfreefr/iotjs-express/builds
 )
 [![codebeat badge](
 https://codebeat.co/badges/b9167a25-1c70-4aad-8d32-2a08eb253e6e
