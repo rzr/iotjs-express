@@ -1,0 +1,16 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: iotjs-express
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        run: iotjs-express
+    spec:
+      containers:
+      - image: rzrfreefr/iotjs-express:latest
+        name: iotjs-express
+        ports:
+        - containerPort: 8888
