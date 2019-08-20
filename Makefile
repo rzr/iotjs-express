@@ -17,6 +17,10 @@ deploy_module_dir ?= ${deploy_modules_dir}/${project}
 deploy_srcs += ${deploy_module_dir}/lib/express.js
 deploy_srcs += ${deploy_module_dir}/index.js
 
+host?=localhost
+port?=8888
+url?=http://${host}:${port}/
+
 help:
 	@echo "## Usage:"
 	@echo "# make start"
@@ -73,3 +77,6 @@ check/runtime/%:
 
 check: check/runtime/${runtime}
 	@echo "# log: $@: $^"
+
+client:
+	curl -i ${url}
