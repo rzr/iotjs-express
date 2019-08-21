@@ -29,12 +29,12 @@ https://img.shields.io/docker/pulls/rzrfreefr/iotjs-express.svg
 https://cloud.docker.com/repository/docker/rzrfreefr/iotjs-express
 )
 [![Automated Builds](
-https://img.shields.io/docker/automated/rzrfreefr/iotjs-express.svg
+https://img.shields.io/docker/cloud/automated/rzrfreefr/iotjs-express.svg
 )](
 https://cloud.docker.com/repository/docker/rzrfreefr/iotjs-express/timeline
 )
 [![Build Status](
-https://img.shields.io/docker/build/rzrfreefr/iotjs-express.svg
+https://img.shields.io/docker/cloud/build/rzrfreefr/iotjs-express.svg
 )](
 https://cloud.docker.com/repository/docker/rzrfreefr/iotjs-express/builds
 )
