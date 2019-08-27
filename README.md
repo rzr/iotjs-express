@@ -71,6 +71,7 @@ a library to build webthings to connect to Mozilla's IoT gateway.
 Source file was bundled into project, but then pulled out as this standalone module,
 which can be used by both runtime Node.Js and IoT.js.
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/7fe74bd1d67d445888268a2eb48e7d6e)](https://app.codacy.com/app/rzr/iotjs-express?utm_source=github.com&utm_medium=referral&utm_content=rzr/iotjs-express&utm_campaign=Badge_Grade_Dashboard)
 [![Presentation](https://image.slidesharecdn.com/webthing-iotjs-20181022rzr-181027220201/95/webthingiotjs20181027rzr-17-638.jpg)](https://www.slideshare.net/rzrfreefr/webthingiotjs20181022rzr-120959360/# "WebThingIotJs")
 
 
