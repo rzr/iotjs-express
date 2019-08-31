@@ -208,13 +208,13 @@ Edison's running a webthing server powered by iotjs-express framework to build r
 
 [![webthing-iotjs-20180621rzr](https://camo.githubusercontent.com/8892251f72dae9fa1c508da8abc33cbc2f6a0e75/68747470733a2f2f732d6f70656e736f757263652e6f72672f77702d636f6e74656e742f75706c6f6164732f323031382f30362f7765627468696e672d696f746a732d3230313830363231727a722e676966#webthing-iotjs-20180621rzr.gif)](https://www.slideshare.net/rzrfreefr/webthingiotjs20181022rzr-120959360/41#webthing-iotjs-20180621rzr "Demo")
 
-* https://player.vimeo.com/video/276279690#webthing-iotjs-20180621rzr
+*   <https://player.vimeo.com/video/276279690#webthing-iotjs-20180621rzr>
 
 Demo also shows following systems:
 
-* Edison: iotjs-express + webthing-iotjs on Jubilinux (Debian fork).
-* RaspberryPi: mozilla-iot-gateway + express.js on Raspbian
-* Galaxy note: SamsungInternet web browser for Android.
+- Edison: iotjs-express + webthing-iotjs on Jubilinux (Debian fork).
+- RaspberryPi: mozilla-iot-gateway + express.js on Raspbian
+- Galaxy note: SamsungInternet web browser for Android.
 
 
 ## EXTRA EXAMPLES: ##
@@ -229,20 +229,21 @@ An extra example is added to show how to make a bridge from HTTP/REST to MQTT.
 
 ## RESOURCES: ##
 
-* https://glitch.com/edit/#!/samsunginternet-iotjs-express
-* https://samsunginternet-iotjs-express.glitch.me/.well-known/security.txt
-* https://www.npmjs.com/browse/depended/iotjs-express
-* http://expressjs.com/
-* https://www.npmjs.com/package/express
-* https://en.wikipedia.org/wiki/Express.js
-* https://iotjs.net
-* https://github.com/rzr/webthing-iotjs/wiki/IotJs
-* https://github.com/pando-project/iotjs/blob/master/docs/api/IoT.js-API-HTTP.md
-* https://github.com/Samsung/iotjs-modules
-* https://nodejs.org/api/http.html
-* https://tools.ietf.org/html/rfc2616
-* https://en.wikipedia.org/wiki/Representational_state_transfer
-* https://github.com/rzr/webthing-iotjs/wiki
-* https://libraries.io/npm/iotjs-express
-* https://github.com/pando-project/iotjs-modules/pull/16# (Merged)
-* https://github.com/runtimejs/runtime/issues/151# (Open)
+*   <https://glitch.com/edit/#!/samsunginternet-iotjs-express>
+*   <https://samsunginternet-iotjs-express.glitch.me/.well-known/security.txt>
+*   <https://www.npmjs.com/browse/depended/iotjs-express>
+*   <http://expressjs.com/>
+*   <https://www.npmjs.com/package/express>
+*   <https://en.wikipedia.org/wiki/Express.js>
+*   <https://iotjs.net/>
+*   <https://github.com/rzr/webthing-iotjs/wiki/IotJs>
+*   <https://github.com/pando-project/iotjs/blob/master/docs/api/IoT.js-API-HTTP.md>
+*   <https://github.com/jerryscript-project>
+*   <https://nodejs.org/api/http.html>
+*   <https://tools.ietf.org/html/rfc2616>
+*   <https://en.wikipedia.org/wiki/Representational_state_transfer>
+*   <https://github.com/rzr/webthing-iotjs/wiki>
+*   <https://libraries.io/npm/iotjs-express>
+*   <https://github.com/runtimejs/runtime/issues/151#> (Open)
+*   <https://github.com/rzr/webthing-iotjs/wiki/Kube>
+*   <https://github.com/the-benchmarker/web-frameworks/issues/1643> (Merged)
