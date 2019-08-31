@@ -1,0 +1,12 @@
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: iotjs-express
+spec:
+  rules:
+  - host: iotjs-express.localhost
+    http:
+      paths:
+      - backend:
+          serviceName: iotjs-express
+          servicePort: 8888
