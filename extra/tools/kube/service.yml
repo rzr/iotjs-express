@@ -1,16 +1,17 @@
 apiVersion: v1
 kind: Service
 metadata:
+  creationTimestamp: null
+  labels:
+    app: iotjs-express
   name: iotjs-express
 spec:
   ports:
-  - nodePort: 30080
-    port: 8888
+  - port: 8888
     protocol: TCP
     targetPort: 8888
   selector:
-    run: iotjs-express
-  sessionAffinity: None
+    app: iotjs-express
   type: NodePort
 status:
   loadBalancer: {}
