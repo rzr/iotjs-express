@@ -43,6 +43,11 @@ https://codebeat.co/badges/b9167a25-1c70-4aad-8d32-2a08eb253e6e
 )](
 https://codebeat.co/projects/github-com-rzr-iotjs-express-master
 )
+[![Codacy Badge](
+https://api.codacy.com/project/badge/Grade/7fe74bd1d67d445888268a2eb48e7d6e
+)](
+https://app.codacy.com/app/rzr/iotjs-express?utm_source=github.com&utm_medium=referral&utm_content=rzr/iotjs-express&utm_campaign=Badge_Grade_Dashboard
+)
 
 [![NPM](
 https://nodei.co/npm/iotjs-express.png
