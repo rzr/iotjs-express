@@ -17,9 +17,12 @@ deploy_module_dir ?= ${deploy_modules_dir}/${project}
 deploy_srcs += ${deploy_module_dir}/lib/express.js
 deploy_srcs += ${deploy_module_dir}/index.js
 
-host?=localhost
+hostname?=localhost
+domain?=
 port?=8888
-url?=http://${host}:${port}/
+endpoint?=/
+host?=${hostname}${domain}
+url?=http://${host}:${port}${endpoint}
 
 help:
 	@echo "## Usage:"
@@ -80,3 +83,9 @@ check: check/runtime/${runtime}
 
 client:
 	curl -i ${url}
+
+demo:
+	curl --version
+	curl -i ${url}
+	curl -i ${url}.well-known/security.txt
+	-curl -i ${url}favicon.ico
