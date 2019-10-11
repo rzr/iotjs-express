@@ -11,7 +11,7 @@
 #}
 
 FROM debian:10
-MAINTAINER Philippe Coval (p.coval@samsung.com)
+LABEL maintainer "Philippe Coval (p.coval@samsung.com)"
 
 ENV DEBIAN_FRONTEND noninteractive
 ENV LC_ALL en_US.UTF-8
@@ -60,7 +60,7 @@ iotjs-snapshot="$version" iotjs="$version" \
   && sync
 
 ENV project iotjs-express
-ADD . /usr/local/opt/${project}/src/${project}/
+COPY . /usr/local/opt/${project}/src/${project}/
 WORKDIR /usr/local/opt/${project}/src/${project}/
 RUN echo "#log: ${project}: Preparing sources" \
   && set -x \
