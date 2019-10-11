@@ -55,7 +55,6 @@ https://nodei.co/npm/iotjs-express.png
 https://npmjs.org/package/iotjs-express
 )
 
-
 ## INTRODUCTION: ##
 
 While ExpressJs claims to be minimalist,
@@ -71,11 +70,9 @@ a library to build webthings to connect to Mozilla's IoT gateway.
 Source file was bundled into project, but then pulled out as this standalone module,
 which can be used by both runtime Node.Js and IoT.js.
 
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/7fe74bd1d67d445888268a2eb48e7d6e)](https://app.codacy.com/app/rzr/iotjs-express?utm_source=github.com&utm_medium=referral&utm_content=rzr/iotjs-express&utm_campaign=Badge_Grade_Dashboard)
 [![Presentation](https://image.slidesharecdn.com/webthing-iotjs-20181022rzr-181027220201/95/webthingiotjs20181027rzr-17-638.jpg)](https://www.slideshare.net/rzrfreefr/webthingiotjs20181022rzr-120959360/# "WebThingIotJs")
 
-
-## USAGE WITH IOTJS: ##
+## USAGE WITH IOTJS ##
 
 ```sh
 mkdir iotjs_modules
@@ -114,8 +111,7 @@ curl -i  http://localhost:8888/static/README.md
 
 [![iotjs_modules](https://image.slidesharecdn.com/webthing-iotjs-tizenrt-cdl2018-20181117rzr-181118110813/95/webthingiotjstizenrtcdl201820181117rzr-24-638.jpg)](https://www.slideshare.net/rzrfreefr/webthingiotjstizenrtcdl201820181117rzr/24 "iotjs_modules")
 
-
-## USAGE WITH NODE: ##
+## USAGE WITH NODE ##
 
 It's mostly the same:
 
@@ -126,10 +122,9 @@ npm start
 # Or:
 make start runtime=node
 #| node example
-
 ```
 
-## USAGE WITH DOCKER: ##
+## USAGE WITH DOCKER ##
 
 ```sh
 docker run --net host rzrfreefr/iotjs-express:latest
@@ -142,8 +137,7 @@ curl http://localhost:8888/.well-known/security.txt
 #| Contact: https://www.npmjs.com/~rzr
 ```
 
-
-## USAGE WITH MINIKUBE: ###
+## USAGE WITH MINIKUBE ##
 
 ```sh
 
@@ -168,8 +162,7 @@ time minikube service ${name}
 #| 🎉  Opening kubernetes service default/iotjs-express in default browser...
 ```
 
-
-## USAGE WITH K3S: ##
+## USAGE WITH K3S ##
 
 ```sh
 project="iotjs-express"
@@ -200,8 +193,7 @@ ip=$($kubectl describe pod "$pod" | grep 'IP:' | awk '{ print $2 }') && echo "ip
 curl http://$ip:8888/.well-known/security.txt
 ```
 
-
-## DEMO: ##
+## DEMO ##
 
 In "webthing-iotjs-20180621rzr" video,
 Edison's running a webthing server powered by iotjs-express framework to build routes,
@@ -217,8 +209,7 @@ Demo also shows following systems:
 - RaspberryPi: mozilla-iot-gateway + express.js on Raspbian
 - Galaxy note: SamsungInternet web browser for Android.
 
-
-## EXTRA EXAMPLES: ##
+## EXTRA EXAMPLES ##
 
 ```sh
 iotjs example/client.js 8888 localhost /.well-known/security.txt
@@ -227,8 +218,7 @@ Contact: https://www.npmjs.com/~rzr
 
 An extra example is added to show how to make a bridge from HTTP/REST to MQTT.
 
-
-## RESOURCES: ##
+## RESOURCES ##
 
 *   <https://glitch.com/edit/#!/samsunginternet-iotjs-express>
 *   <https://samsunginternet-iotjs-express.glitch.me/.well-known/security.txt>
@@ -248,3 +238,4 @@ An extra example is added to show how to make a bridge from HTTP/REST to MQTT.
 *   <https://github.com/runtimejs/runtime/issues/151#> (Open)
 *   <https://github.com/rzr/webthing-iotjs/wiki/Kube>
 *   <https://github.com/the-benchmarker/web-frameworks/issues/1643> (Merged)
+*   <https://www.openhub.net/p/iotjs-express>
