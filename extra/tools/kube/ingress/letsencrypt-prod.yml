@@ -1,0 +1,18 @@
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: ${name}-prod
+  annotations:
+    certmanager.k8s.io/cluster-issuer: letsencrypt-prod
+spec:
+  tls:
+  - hosts:
+    - ${host}
+    secretName: ${name}-prod
+  rules:
+  - host: ${host}
+    http:
+      paths:
+      - backend:
+          serviceName: ${name}
+          servicePort: ${port}
