@@ -6,4 +6,5 @@
 /tmp/
 dive.log
 npm-debug.log
-
+build
+template
