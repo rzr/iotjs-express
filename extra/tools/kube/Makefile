@@ -24,6 +24,7 @@ namespace?=k8s.io
 hostname=localhost
 domain?=${hostname}
 host?=${name}.${domain}
+email?=${USER}@${host}
 endpoint?=/
 url?=http://${host}${endpoint}
 sudo?=sudo
@@ -39,7 +40,7 @@ help:
 	@echo "# make demo"
 	@echo "# make start"
 	@echo "# make proxy"
-	@echo "# make ingress"
+	@echo "# make apply/ingress"
 	@echo "# make host"
 	@echo "# make client"
 	@echo "### Config: "
@@ -154,7 +155,7 @@ enable:
 	${k8s}.status | grep 'ingress: enabled' || ${k8s}.status | grep "ingress: " || sleep 10
 	${k8s}.status | grep 'ingress: enabled'
 
-ingress: ingress.yml # enable
+apply/ingress: ingress.yml # enable
 	${k8s}.status --wait-ready
 	-${kubectl} delete ingress.extensions/${name}
 	sed -e "s|host: .*|host: ${host}|g" < $< | ${kubectl} apply -f -
@@ -201,7 +202,7 @@ ${k8s}/start:
 	${k8s}.start
 	${k8s}.status --wait-ready
 
-load: help spec import enable apply ingress
+load: help spec import enable apply apply/ingress
 	@echo "# log: $@: $^"
 
 start: ${k8s}/start load
@@ -241,6 +242,7 @@ delete/src:
 	rm -fv deployment.yml service.yml ${name}.yml
 
 delete/run:
+	${k8s}.status --wait-ready
 	-${kubectl} delete service/${name}
 	-${kubectl} delete deployment.apps/${name}
 	-${kubectl} delete ingress.extensions/${name}
@@ -301,3 +303,65 @@ backup: stop
 version:
 	snap info ${k8s}
 	cat /proc/cpuinfo
+
+# TODO: update to current  v0.11.0
+cert-manager_revision?=v0.9.1
+cert-manager_url?=https://github.com/jetstack/cert-manager/releases/download/${cert-manager_revision}/cert-manager.yaml
+cert-manager:
+	${k8s}.status --wait-ready
+	-${kubectl} delete namespace $@
+	${kubectl} create namespace $@
+	${kubectl} label namespace $@ certmanager.k8s.io/disable-validation=true --overwrite
+	${kubectl} apply -f ${cert-manager_url}
+	${k8s}.status --wait-ready
+	${kubectl} get pods --namespace $@
+	-${kubectl} logs -n cert-manager deploy/cert-manager
+	@echo "# log: Wait Running status (TODO)"
+
+clusterissuer/%: clusterissuer/%.yml
+	${k8s}.status --wait-ready
+	-${kubectl} delete $@
+	cat $< | sed \
+  -e "s/\$${email}/${email}/g" \
+  | ${kubectl} apply -f -
+	${k8s}.status --wait-ready
+	${kubectl} describe $@
+
+certificate/%: certificate/%.yml
+	${k8s}.status --wait-ready
+	cat $< | sed \
+  -e "s/\$${domain}/${domain}/g" \
+  -e "s/\$${email}/${email}/g" \
+  -e "s/\$${host}/${host}/g" \
+  -e "s/\$${name}/${name}/g" \
+  -e "s/\$${port}/${port}/g" \
+  | ${kubectl} apply -f -
+	${k8s}.status --wait-ready
+	-curl -ki http://${domain}/.well-known/acme-challenge/
+	-${kubectl} describe certificate.certmanager.k8s.io/${@F} # OrderCreated, wait CertIssued
+	${kubectl} get certificate # TODO READY
+	${kubectl} logs -n cert-manager deploy/cert-manager
+	${kubectl} get order | grep "^${name}-"
+	@echo "# log: Wait 'valid' State ($@)"
+
+ingress/%: ingress/%.yml
+	${k8s}.status --wait-ready
+	cat $< | sed \
+  -e "s/\$${domain}/${domain}/g" \
+  -e "s/\$${host}/${host}/g" \
+  -e "s/\$${name}/${name}/g" \
+  -e "s/\$${port}/${port}/g" \
+  | ${kubectl} apply -f -
+	${k8s}.status --wait-ready
+	${kubectl} get $@
+	${kubectl} describe $@
+
+client/https:
+	-curl -i http://${name}.${domain}/ \
+  || curl -ki http://${name}.${domain}/
+	-curl -i https://${name}.${domain}/ \
+  || curl -ki https://${name}.${domain}/
+
+client/openssl:
+	openssl s_client -connect ${host}:443 -showcerts  | grep 'issuer='
+
