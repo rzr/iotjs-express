@@ -13,13 +13,6 @@ var console = require('console');
 var http = require('http');
 
 
-var options = {
-  hostname: 'localhost',
-  port: 8888,
-  path: '/'
-};
-
-
 function receive(incoming, callback) {
   var data = '';
   incoming.on('data', function (chunk) {
@@ -28,24 +21,27 @@ function receive(incoming, callback) {
 
   incoming.on('end', function () {
     if (callback) {
-      return callback(data);
+      return callback(null, data);
     }
 
     return null;
   });
 }
 
-// Main
-if (module.parent === null) {
-  if (process.argv[2]) {
-    options.port = Number(process.argv[2]);
+function request(options, callback) {
+  if (typeof options === 'undefined') {
+    options = {};
   }
-  if (process.argv[3]) {
-    options.hostname = process.argv[3];
+  if (typeof options.hostname === 'undefined') {
+    options.hostname = 'localhost';
   }
-  if (process.argv[4]) {
-    options.path = process.argv[4];
+  if (typeof options.port === 'undefined') {
+    options.port = 8888;
   }
+  if (typeof options.path === 'undefined') {
+    options.path = '/';
+  }
+
   // Workaround bug
   if (!options.headers) {
     options.headers = {};
@@ -55,13 +51,31 @@ if (module.parent === null) {
   }
 
   http.request(options, function (res) {
-    receive(res, function (data) {
-      try {
-        var object = JSON.parse(data);
-        console.log(JSON.stringify(object));
-      } catch (err) {
-        console.log(data);
-      }
-    });
+    receive(res, callback);
   }).end();
+}
+
+
+module.exports = request;
+
+// Main
+if (module.parent === null) {
+  var options = {};
+  if (process.argv[2]) {
+    options.port = Number(process.argv[2]);
+  }
+  if (process.argv[3]) {
+    options.hostname = process.argv[3];
+  }
+  if (process.argv[4]) {
+    options.path = process.argv[4];
+  }
+  request(options, function (res, data) {
+    try {
+      var object = JSON.parse(data);
+      console.log(JSON.stringify(object));
+    } catch (err) {
+      console.log(data);
+    }
+  });
 }
