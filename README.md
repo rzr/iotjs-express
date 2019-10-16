@@ -48,6 +48,12 @@ https://api.codacy.com/project/badge/Grade/7fe74bd1d67d445888268a2eb48e7d6e
 )](
 https://app.codacy.com/app/rzr/iotjs-express?utm_source=github.com&utm_medium=referral&utm_content=rzr/iotjs-express&utm_campaign=Badge_Grade_Dashboard
 )
+[![CII Best Practices](
+https://bestpractices.coreinfrastructure.org/projects/3297/badge
+)](
+https://bestpractices.coreinfrastructure.org/projects/3297
+)
+
 
 [![NPM](
 https://nodei.co/npm/iotjs-express.png
@@ -239,3 +245,4 @@ An extra example is added to show how to make a bridge from HTTP/REST to MQTT.
 *   <https://github.com/rzr/webthing-iotjs/wiki/Kube>
 *   <https://github.com/the-benchmarker/web-frameworks/issues/1643> (Merged)
 *   <https://www.openhub.net/p/iotjs-express>
+*   <https://microbadger.com/images/rzrfreefr/iotjs-express>
