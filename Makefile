@@ -81,8 +81,15 @@ check/runtime/%:
 check: check/runtime/${runtime}
 	@echo "# log: $@: $^"
 
-client:
+client/curl:
 	curl -i ${url}
+	@echo ""
+
+client/iotjs: example/client.js
+	${runtime} $<
+
+client: client/curl client/iotjs
+	@echo "# log: $@: $^"	
 
 demo:
 	curl --version
