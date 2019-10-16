@@ -56,7 +56,7 @@ function request(options, callback) {
 }
 
 
-module.exports = request;
+module.exports = { request: request };
 
 // Main
 if (module.parent === null) {
