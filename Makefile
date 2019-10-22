@@ -28,6 +28,12 @@ help:
 	@echo "## Usage:"
 	@echo "# make start"
 
+setup/iotjs: extra/tools/iotjs/setup.sh
+	$<
+
+setup: setup/iotjs
+	@echo "# log: $@: $^"
+
 node/start: ${example}
 	node $<
 
