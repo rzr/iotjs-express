@@ -81,7 +81,7 @@ cd iotjs_modules/iotjs-express
 make start &
 #| iotjs example
 
-curl -i http://localhost:8888/.well-known/security.txt
+curl -i http://localhost:8080/.well-known/security.txt
 #| HTTP/1.1 200 OK
 #| access-control-allow-origin: *
 #| access-control-allow-headers: Origin, X-Requested-With, Content-Type, Accept
@@ -89,21 +89,21 @@ curl -i http://localhost:8888/.well-known/security.txt
 #| 
 #| Contact: https://www.npmjs.com/~rzr
 
-curl -i http://localhost:8888/favicon.ico
+curl -i http://localhost:8080/favicon.ico
 #| HTTP/1.1 404 Not Found
 #| content-length: 23
 #| Error: 404 (Not Found)
 
-curl -i http://localhost:8888/~rzr
+curl -i http://localhost:8080/~rzr
 #| {"user":"rzr"}
 
-curl -X PUT -d '{"value":42}' http://localhost:8888/db/some-key
+curl -X PUT -d '{"value":42}' http://localhost:8080/db/some-key
 #| {"some-key":42}
 
-curl -X PUT -d '{"value":1984}' http://localhost:8888/db/some-other-key
+curl -X PUT -d '{"value":1984}' http://localhost:8080/db/some-other-key
 #| {"some-key":42,"some-other-key":1984}
 
-curl -i  http://localhost:8888/static/README.md  
+curl -i  http://localhost:8080/static/README.md  
 #| HTTP/1.1 200 OK
 #| # IOTJS-EXPRESS #
 #| (...)
@@ -128,12 +128,12 @@ make start runtime=node
 
 ```sh
 docker run --net host rzrfreefr/iotjs-express:latest
-curl http://localhost:8888/.well-known/security.txt
+curl http://localhost:8080/.well-known/security.txt
 #| Contact: https://www.npmjs.com/~rzr
 
 # Or from sources
 docker-compose up
-curl http://localhost:8888/.well-known/security.txt
+curl http://localhost:8080/.well-known/security.txt
 #| Contact: https://www.npmjs.com/~rzr
 ```
 
@@ -190,7 +190,7 @@ pod=$($kubectl get all --all-namespaces \
 $kubectl describe pod "$pod"  | grep 'Status:             Running'
 ip=$($kubectl describe pod "$pod" | grep 'IP:' | awk '{ print $2 }') && echo "ip=${ip}"
 
-curl http://$ip:8888/.well-known/security.txt
+curl http://$ip:8080/.well-known/security.txt
 ```
 
 ## DEMO ##
@@ -212,7 +212,7 @@ Demo also shows following systems:
 ## EXTRA EXAMPLES ##
 
 ```sh
-iotjs example/client.js 8888 localhost /.well-known/security.txt
+iotjs example/client.js 8080 localhost /.well-known/security.txt
 Contact: https://www.npmjs.com/~rzr
 ```
 

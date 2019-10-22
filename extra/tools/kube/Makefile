@@ -10,7 +10,7 @@ default: help
 
 name?=iotjs-express
 revision?=$(shell git describe --tags 2> /dev/null || echo "0.0.0")
-port?=8888
+port?=8080
 nodePort?=30080
 type=NodePort
 docker?=docker

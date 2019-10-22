@@ -50,7 +50,7 @@ RUN echo "#log: ${project}: Preparing sources" \
   && make check \
   && sync
 
-EXPOSE 8888
+EXPOSE 8080
 WORKDIR /usr/local/opt/${project}/src/${project}/
 ENTRYPOINT [ "/usr/bin/make" ]
 CMD [ "start" ]

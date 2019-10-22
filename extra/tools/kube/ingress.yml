@@ -9,4 +9,4 @@ spec:
       paths:
       - backend:
           serviceName: iotjs-express
-          servicePort: 8888
+          servicePort: 8080

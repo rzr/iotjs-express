@@ -34,7 +34,7 @@ function publish(options, topic, message) {
 
 function App() {
   var http = require('http');
-  var port = 8888;
+  var port = 8080;
   if (process.argv[2]) {
     port = Number(process.argv[2]);
   }

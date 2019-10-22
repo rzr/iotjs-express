@@ -21,7 +21,7 @@ try {
 
 // Main
 if (module.parent === null) {
-  var port = 8888;
+  var port = 8080;
   var db = {};
   if (process.argv[2]) {
     port = Number(process.argv[2]);

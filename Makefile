@@ -19,7 +19,7 @@ deploy_srcs += ${deploy_module_dir}/index.js
 
 hostname?=localhost
 domain?=
-port?=8888
+port?=8080
 endpoint?=/
 host?=${hostname}${domain}
 url?=http://${host}:${port}${endpoint}

@@ -36,7 +36,7 @@ function request(options, callback) {
     options.hostname = 'localhost';
   }
   if (typeof options.port === 'undefined') {
-    options.port = 8888;
+    options.port = 8080;
   }
   if (typeof options.path === 'undefined') {
     options.path = '/';

@@ -51,3 +51,8 @@ sudo apt-get install \
 
 which iotjs
 iotjs -h || echo "log: iotjs's usage expected to be printed before"
+
+file=$(mktemp)
+echo 'console.log(JSON.stringify(process))' > "$file"
+iotjs "$file"
+rm -f -- "$file"
