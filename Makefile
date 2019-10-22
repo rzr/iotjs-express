@@ -97,6 +97,18 @@ client/iotjs: example/client.js
 client: client/curl client/iotjs
 	@echo "# log: $@: $^"	
 
+client/put/%:
+	curl -H "Content-Type: application/json" -X PUT -d '{ "value": ${@F}}' "${url}db/value"
+	@echo ""
+	curl -i ${url}
+	@echo ""
+
+client/put: client/put/0
+	@echo "# log: $@: $^"
+
+client/demo: client client/put/1 client/put/2
+	@echo "# log: $@: $^"
+
 demo:
 	curl --version
 	curl -i ${url}
