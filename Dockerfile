@@ -34,34 +34,15 @@ RUN echo "#log: Setup system" \
   && apt-get clean \
   && sync
 
-RUN echo "#log: Install iotjs" \
-  && set -x \
-  && sudo apt-get update -y \
-  && apt-cache show iotjs || echo "TODO: iotjs is in debian:testing !"\
-  && dpkg-architecture || :\
-  && . /etc/os-release \
-  && distro="${ID}_${VERSION_ID}" \
-  && [ "debian" != "${ID}" ] || distro="${distro}.0" \
-  && [ "debian_10.0" != "$distro" ] || distro="${ID}_${VERSION_ID}" \
-  && distro=$(echo "${distro}" | sed 's/.*/\u&/') \
-  && [ "ubuntu" != "${ID}" ] || distro="x${distro}" \
-  && url="http://download.opensuse.org/repositories/home:/rzrfreefr:/snapshot/$distro" \
-  && file="/etc/apt/sources.list.d/org_opensuse_home_rzrfreefr_snapshot.list" \
-  && echo "deb [allow-insecure=yes] $url /" | sudo tee "$file" \
-  && sudo apt-get update -y \
-  && apt-cache search --full iotjs \
-  && version=$(apt-cache show "iotjs-snapshot" \
-| grep 'Version:' | cut -d' ' -f2 | sort -n | head -n1 || echo 0) \
-  && sudo apt-get install -y --allow-unauthenticated \
-iotjs-snapshot="$version" iotjs="$version" \
-  && which iotjs \
-  && iotjs -h || echo "log: iotjs's usage expected to be printed before" \
-  && apt-get clean \
-  && sync
-
 ENV project iotjs-express
 COPY . /usr/local/opt/${project}/src/${project}/
 WORKDIR /usr/local/opt/${project}/src/${project}/
+RUN echo "#log: Install iotjs" \
+  && set -x \
+  && make setup \
+  && apt-get clean \
+  && sync
+
 RUN echo "#log: ${project}: Preparing sources" \
   && set -x \
   && make help \
