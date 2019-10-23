@@ -9,9 +9,7 @@
  * https://spdx.org/licenses/MIT.html
  *
  */
-"use strict"
-var ClientRequest = require('iotjs-express/example/client');
-
-module.exports = (context, callback) => {
-  ClientRequest(JSON.parse(context || {}), callback);
-}
+var Client = require('iotjs-express/example/client');
+module.exports = function(context, callback) {
+  Client.request(JSON.parse(context || '{}'), callback);
+};
