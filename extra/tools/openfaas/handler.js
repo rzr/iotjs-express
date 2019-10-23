@@ -10,8 +10,7 @@
  *
  */
 "use strict"
-var ClientRequest = require('iotjs-express/example/client');
-
+var Client = require('iotjs-express/example/client');
 module.exports = (context, callback) => {
-  ClientRequest(JSON.parse(context || {}), callback);
+  Client.request(JSON.parse(context || "{}"), callback);
 }
