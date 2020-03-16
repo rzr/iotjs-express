@@ -11,7 +11,7 @@
 #}
 
 FROM rzrfreefr/iotjs-express:latest
-LABEL maintainer "Philippe Coval (p.coval@samsung.com)"
+LABEL maintainer "Philippe Coval (rzr@users.sf.net)"
 
 ENV project iotjs-express-openfaas
 COPY . /usr/local/opt/${project}/src/${project}/

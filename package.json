@@ -26,7 +26,7 @@
     "webservice",
     "WoT"
   ],
-  "author": "Philippe Coval <p.coval@samsung.com> (https://www.npmjs.com/~rzr)",
+  "author": "Philippe Coval <rzr@users.sf.net> (https://www.npmjs.com/~rzr)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/rzr/iotjs-express/issues"

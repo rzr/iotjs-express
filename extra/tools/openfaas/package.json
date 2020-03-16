@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "Philippe Coval <p.coval@samsung.com> (https://www.npmjs.com/~rzr)",
+  "author": "Philippe Coval <rzr@users.sf.net> (https://www.npmjs.com/~rzr)",
   "license": "MIT",
   "dependencies": {
     "iotjs-express": "0.0.13"
