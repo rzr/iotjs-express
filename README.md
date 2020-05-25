@@ -223,7 +223,7 @@ https://camo.githubusercontent.com/8892251f72dae9fa1c508da8abc33cbc2f6a0e75/6874
 https://www.slideshare.net/rzrfreefr/webthingiotjs20181022rzr-120959360/41#webthing-iotjs-20180621rzr
 "Demo")
 
-* <https://player.vimeo.com/video/276279690#webthing-iotjs-20180621rzr>
+*   <https://player.vimeo.com/video/276279690#webthing-iotjs-20180621rzr>
 
 Demo also shows following systems:
 
@@ -242,24 +242,24 @@ An extra example is added to show how to make a bridge from HTTP/REST to MQTT.
 
 ## RESOURCES ##
 
-* <https://glitch.com/edit/#!/rzr-iotjs-express>
-* <https://rzr-iotjs-express.glitch.me/.well-known/security.txt>
-* <https://rzr-iotjs-express.glitch.me/static/README.md>
-* <https://www.npmjs.com/browse/depended/iotjs-express>
-* <http://expressjs.com/>
-* <https://www.npmjs.com/package/express>
-* <https://en.wikipedia.org/wiki/Express.js>
-* <https://iotjs.net/>
-* <https://github.com/rzr/webthing-iotjs/wiki/IotJs>
-* <https://github.com/pando-project/iotjs/blob/master/docs/api/IoT.js-API-HTTP.md>
-* <https://github.com/jerryscript-project>
-* <https://nodejs.org/api/http.html>
-* <https://tools.ietf.org/html/rfc2616>
-* <https://en.wikipedia.org/wiki/Representational_state_transfer>
-* <https://github.com/rzr/webthing-iotjs/wiki>
-* <https://libraries.io/npm/iotjs-express>
-* <https://github.com/runtimejs/runtime/issues/151#> (Open)
-* <https://github.com/rzr/webthing-iotjs/wiki/Kube>
-* <https://github.com/the-benchmarker/web-frameworks/issues/1643> (Merged)
-* <https://www.openhub.net/p/iotjs-express/>
-* <https://microbadger.com/images/rzrfreefr/iotjs-express>
+*   <https://libraries.io/npm/iotjs-express>
+*   <https://www.openhub.net/p/iotjs-express/>
+*   <https://microbadger.com/images/rzrfreefr/iotjs-express>
+*   <https://glitch.com/edit/#!/rzr-iotjs-express>
+*   <https://rzr-iotjs-express.glitch.me/.well-known/security.txt>
+*   <https://rzr-iotjs-express.glitch.me/static/README.md>
+*   <https://www.npmjs.com/browse/depended/iotjs-express>
+*   <http://expressjs.com/>
+*   <https://www.npmjs.com/package/express>
+*   <https://en.wikipedia.org/wiki/Express.js>
+*   <https://iotjs.net/>
+*   <https://github.com/rzr/webthing-iotjs/wiki/IotJs>
+*   <https://github.com/pando-project/iotjs/blob/master/docs/api/IoT.js-API-HTTP.md>
+*   <https://github.com/jerryscript-project>
+*   <https://nodejs.org/api/http.html>
+*   <https://tools.ietf.org/html/rfc2616>
+*   <https://en.wikipedia.org/wiki/Representational_state_transfer>
+*   <https://github.com/rzr/webthing-iotjs/wiki>
+*   <https://github.com/runtimejs/runtime/issues/151#> (Open)
+*   <https://github.com/rzr/webthing-iotjs/wiki/Kube>
+*   <https://github.com/the-benchmarker/web-frameworks/issues/1643> (Merged)
