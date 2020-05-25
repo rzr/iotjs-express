@@ -20,7 +20,9 @@ ENV LANG ${LC_ALL}
 RUN echo "#log: Configuring locales" \
   && set -x \
   && apt-get update -y \
-  && apt-get install -y locales \
+  && apt-get install -y \
+    --no-install-recommends \
+    locales \
   && echo "${LC_ALL} UTF-8" | tee /etc/locale.gen \
   && locale-gen ${LC_ALL} \
   && dpkg-reconfigure locales \
@@ -30,6 +32,7 @@ RUN echo "#log: Setup system" \
   && set -x \
   && apt-get update -y \
   && apt-get install -y \
+      --no-install-recommends \
      sudo apt-transport-https make curl git \
   && apt-get clean \
   && sync
