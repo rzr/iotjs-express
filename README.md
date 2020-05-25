@@ -31,7 +31,7 @@ https://kiwiirc.com/client/irc.freenode.net/#iot
 [![Docker Pulls](
 https://img.shields.io/docker/pulls/rzrfreefr/iotjs-express.svg
 )](
-https://cloud.docker.com/repository/docker/rzrfreefr/iotjs-express
+https://hub.docker.com/r/rzrfreefr/iotjs-express
 )
 [![Automated Builds](
 https://img.shields.io/docker/cloud/automated/rzrfreefr/iotjs-express.svg
@@ -41,7 +41,7 @@ https://cloud.docker.com/repository/docker/rzrfreefr/iotjs-express/timeline
 [![Build Status](
 https://img.shields.io/docker/cloud/build/rzrfreefr/iotjs-express.svg
 )](
-https://cloud.docker.com/repository/docker/rzrfreefr/iotjs-express/builds
+https://hub.docker.com/r/rzrfreefr/iotjs-express/builds
 )
 [![codebeat badge](
 https://codebeat.co/badges/b9167a25-1c70-4aad-8d32-2a08eb253e6e
@@ -58,10 +58,11 @@ https://bestpractices.coreinfrastructure.org/projects/3297/badge
 )](
 https://bestpractices.coreinfrastructure.org/projects/3297
 )
-![Mastodon Follow](
+[![Fediverse](
 https://img.shields.io/mastodon/follow/279303?domain=https%3A%2F%2Fmastodon.social&style=social
+)](
+https://mastodon.social/@rzr/104148998830650482#IotJsExpress#
 )
-
 
 [![NPM](
 https://nodei.co/npm/iotjs-express.png
@@ -222,9 +223,9 @@ Edison's running a webthing server powered by iotjs-express framework to build r
 (it relies on IoT.js's http module, API is aligned to node)
 
 [![webthing-iotjs-20180621rzr](
-https://camo.githubusercontent.com/8892251f72dae9fa1c508da8abc33cbc2f6a0e75/68747470733a2f2f732d6f70656e736f757263652e6f72672f77702d636f6e74656e742f75706c6f6164732f323031382f30362f7765627468696e672d696f746a732d3230313830363231727a722e676966#./file/webthing-iotjs-20180621rzr.gif
+https://repository-images.githubusercontent.com/172125887/a54ff900-9e77-11ea-950f-f5510b42259b#./file/webthing-iotjs-20180621rzr.gif
 )](
-https://www.slideshare.net/rzrfreefr/webthingiotjs20181022rzr-120959360/41#webthing-iotjs-20180621rzr
+https://mastodon.social/@rzr/103595181296044323#webthing-iotjs-20180621rzr
 "Demo")
 
 *   <https://player.vimeo.com/video/276279690#webthing-iotjs-20180621rzr>
@@ -253,6 +254,9 @@ An extra example is added to show how to make a bridge from HTTP/REST to MQTT.
 *   <https://rzr-iotjs-express.glitch.me/.well-known/security.txt>
 *   <https://rzr-iotjs-express.glitch.me/static/README.md>
 *   <https://www.npmjs.com/browse/depended/iotjs-express>
+*   <https://mastodon.social/@rzr/104148998830650482>
+*   <https://www.slideshare.net/rzrfreefr/webthingiotjs20181022rzr-120959360>
+*   <https://purl.org/rzr/presentations>
 *   <http://expressjs.com/>
 *   <https://www.npmjs.com/package/express>
 *   <https://en.wikipedia.org/wiki/Express.js>
