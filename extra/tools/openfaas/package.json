@@ -10,6 +10,6 @@
   "author": "Philippe Coval <rzr@users.sf.net> (https://www.npmjs.com/~rzr)",
   "license": "MIT",
   "dependencies": {
-    "iotjs-express": "0.0.14"
+    "iotjs-express": "0.0.15"
   }
 }
