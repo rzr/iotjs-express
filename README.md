@@ -242,8 +242,9 @@ An extra example is added to show how to make a bridge from HTTP/REST to MQTT.
 
 ## RESOURCES ##
 
-* <https://glitch.com/edit/#!/samsunginternet-iotjs-express>
-* <https://samsunginternet-iotjs-express.glitch.me/.well-known/security.txt>
+* <https://glitch.com/edit/#!/rzr-iotjs-express>
+* <https://rzr-iotjs-express.glitch.me/.well-known/security.txt>
+* <https://rzr-iotjs-express.glitch.me/static/README.md>
 * <https://www.npmjs.com/browse/depended/iotjs-express>
 * <http://expressjs.com/>
 * <https://www.npmjs.com/package/express>
