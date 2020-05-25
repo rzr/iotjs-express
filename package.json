@@ -33,7 +33,7 @@
   },
   "homepage": "https://libraries.io/npm/iotjs-express",
   "devDependencies": {
-    "eslint": "^7.0.0"
+    "eslint": "^7.1.0"
   },
   "iotjs": {
     "version": ">=1.0"
