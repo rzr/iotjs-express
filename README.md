@@ -18,10 +18,15 @@ https://img.shields.io/npm/v/iotjs-express.svg
 )](
 https://www.npmjs.com/package/iotjs-express
 )
+[![JsDelivr](
+https://data.jsdelivr.com/v1/package/npm/iotjs-express/badge
+)](
+https://www.jsdelivr.com/package/npm/iotjs-express
+)
 [![IRC Channel](
 https://img.shields.io/badge/chat-on%20freenode-brightgreen.svg
 )](
-https://kiwiirc.com/client/irc.freenode.net/#tizen
+https://kiwiirc.com/client/irc.freenode.net/#iot
 )
 [![Docker Pulls](
 https://img.shields.io/docker/pulls/rzrfreefr/iotjs-express.svg
