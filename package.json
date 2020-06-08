@@ -1,15 +1,15 @@
 {
-  "name": "iotjs-express",
-  "version": "0.0.16",
-  "description": "Basic reimplementation of Express.js for IoT.js or Node",
-  "main": "index.js",
-  "scripts": {
-    "lint": "eslint .",
-    "start": "node example"
+  "author": "Philippe Coval <rzr@users.sf.net> (https://www.npmjs.com/~rzr)",
+  "bugs": {
+    "url": "https://github.com/rzr/iotjs-express/issues"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/rzr/iotjs-express.git"
+  "description": "Basic reimplementation of Express.js for IoT.js or Node",
+  "devDependencies": {
+    "eslint": "^7.2.0"
+  },
+  "homepage": "https://libraries.io/npm/iotjs-express",
+  "iotjs": {
+    "version": ">=1.0"
   },
   "keywords": [
     "API",
@@ -26,16 +26,16 @@
     "webservice",
     "WoT"
   ],
-  "author": "Philippe Coval <rzr@users.sf.net> (https://www.npmjs.com/~rzr)",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/rzr/iotjs-express/issues"
+  "main": "index.js",
+  "name": "iotjs-express",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rzr/iotjs-express.git"
   },
-  "homepage": "https://libraries.io/npm/iotjs-express",
-  "devDependencies": {
-    "eslint": "^7.2.0"
+  "scripts": {
+    "lint": "eslint .",
+    "start": "node example"
   },
-  "iotjs": {
-    "version": ">=1.0"
-  }
+  "version": "0.0.16"
 }
