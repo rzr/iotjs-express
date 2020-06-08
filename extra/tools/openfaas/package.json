@@ -1,15 +1,15 @@
 {
-  "name": "function",
-  "version": "1.0.3",
+  "author": "Philippe Coval <rzr@users.sf.net> (https://www.npmjs.com/~rzr)",
+  "dependencies": {
+    "iotjs-express": "0.0.16"
+  },
   "description": "",
+  "keywords": [],
+  "license": "MIT",
   "main": "handler.js",
+  "name": "function",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "Philippe Coval <rzr@users.sf.net> (https://www.npmjs.com/~rzr)",
-  "license": "MIT",
-  "dependencies": {
-    "iotjs-express": "0.0.16"
-  }
+  "version": "1.0.3"
 }
