@@ -9,7 +9,6 @@
  * https://spdx.org/licenses/MIT.html
  */
 
-var console = require('console');
 var fs = require('fs');
 
 var Express = null;

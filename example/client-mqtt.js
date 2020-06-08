@@ -9,7 +9,6 @@
  * https://spdx.org/licenses/MIT.html
  */
 
-var console = require('console');
 // Disable logs here by editing to '!console.log'
 var verbose = !console.log || function () {};
 

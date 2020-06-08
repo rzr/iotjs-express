@@ -9,7 +9,6 @@
  * https://spdx.org/licenses/MIT.html
  */
 
-var console = require('console');
 var http = require('http');
 
 
