@@ -10,7 +10,7 @@
 # https://spdx.org/licenses/MIT.html
 #}
 
-FROM rzrfreefr/iotjs-express:latest
+FROM rzrfreefr/iotjs-express:v0.0.16
 LABEL maintainer "Philippe Coval (rzr@users.sf.net)"
 
 ENV project iotjs-express-openfaas
