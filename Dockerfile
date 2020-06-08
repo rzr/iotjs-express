@@ -22,7 +22,7 @@ RUN echo "#log: Configuring locales" \
   && apt-get update -y \
   && apt-get install -y \
     --no-install-recommends \
-    locales \
+    locales=2.28-10 \
   && echo "${LC_ALL} UTF-8" | tee /etc/locale.gen \
   && locale-gen ${LC_ALL} \
   && dpkg-reconfigure locales \
@@ -33,7 +33,11 @@ RUN echo "#log: Setup system" \
   && apt-get update -y \
   && apt-get install -y \
       --no-install-recommends \
-     sudo apt-transport-https make curl git \
+     apt-transport-https=1.8.2.1 \
+     curl=7.64.0-4+deb10u1 \
+     git=1:2.20.1-2+deb10u3 \
+     make=4.2.1-1.2 \
+     sudo=1.8.27-1+deb10u2 \
   && apt-get clean \
   && sync
 
