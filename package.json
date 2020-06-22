@@ -37,5 +37,5 @@
     "lint": "eslint .",
     "start": "node example"
   },
-  "version": "0.0.17"
+  "version": "0.0.18"
 }
