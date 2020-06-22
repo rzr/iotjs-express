@@ -232,9 +232,9 @@ https://mastodon.social/@rzr/103595181296044323#webthing-iotjs-20180621rzr
 
 Demo also shows following systems:
 
-* Edison: iotjs-express + webthing-iotjs on Jubilinux (Debian fork).
-* RaspberryPi: mozilla-iot-gateway + express.js on Raspbian
-* Galaxy note: SamsungInternet web browser for Android.
+*   Edison: iotjs-express + webthing-iotjs on Jubilinux (Debian fork).
+*   RaspberryPi: mozilla-iot-gateway + express.js on Raspbian
+*   Galaxy note: SamsungInternet web browser for Android.
 
 ## EXTRA EXAMPLES ##
 
