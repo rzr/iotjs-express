@@ -26,6 +26,7 @@ RUN echo "#log: Configuring locales" \
   && echo "${LC_ALL} UTF-8" | tee /etc/locale.gen \
   && locale-gen ${LC_ALL} \
   && dpkg-reconfigure locales \
+  && rm -rf /var/lib/apt/lists/* \  
   && sync
 
 RUN echo "#log: Setup system" \
@@ -48,7 +49,7 @@ RUN echo "#log: Install iotjs" \
   && set -x \
   && make setup \
   && apt-get clean \
-  && rm -rf /var/lib/apt/lists/*
+  && rm -rf /var/lib/apt/lists/* \
   && sync
 
 RUN echo "#log: ${project}: Preparing sources" \
