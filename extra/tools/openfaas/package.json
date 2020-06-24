@@ -1,7 +1,7 @@
 {
   "author": "Philippe Coval <rzr@users.sf.net> (https://www.npmjs.com/~rzr)",
   "dependencies": {
-    "iotjs-express": "0.0.17"
+    "iotjs-express": "0.0.18"
   },
   "description": "",
   "keywords": [],
