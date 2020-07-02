@@ -26,7 +26,7 @@ RUN echo "#log: Configuring locales" \
   && echo "${LC_ALL} UTF-8" | tee /etc/locale.gen \
   && locale-gen ${LC_ALL} \
   && dpkg-reconfigure locales \
-  && rm -rf /var/lib/apt/lists/* \  
+  && rm -rf /var/lib/apt/lists/* \
   && sync
 
 RUN echo "#log: Setup system" \
@@ -39,6 +39,7 @@ RUN echo "#log: Setup system" \
      git=1:2.20.1-2+deb10u3 \
      make=4.2.1-1.2 \
      sudo=1.8.27-1+deb10u2 \
+  && rm -rf /var/lib/apt/lists/* \
   && apt-get clean \
   && sync
 
