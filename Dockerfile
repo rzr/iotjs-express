@@ -26,6 +26,7 @@ RUN echo "#log: Configuring locales" \
   && echo "${LC_ALL} UTF-8" | tee /etc/locale.gen \
   && locale-gen ${LC_ALL} \
   && dpkg-reconfigure locales \
+  && apt-get clean \    
   && rm -rf /var/lib/apt/lists/* \
   && sync
 
