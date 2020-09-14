@@ -7,7 +7,7 @@
   "devDependencies": {
     "eslint": "^7.5.0"
   },
-  "homepage": "https://libraries.io/npm/iotjs-express",
+  "homepage": "https://mastodon.social/@rzr/104148998830650482#IotJsExpress#",
   "iotjs": {
     "version": ">=1.0"
   },
