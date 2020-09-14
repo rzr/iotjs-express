@@ -271,3 +271,4 @@ An extra example is added to show how to make a bridge from HTTP/REST to MQTT.
 *   <https://github.com/runtimejs/runtime/issues/151#> (Open)
 *   <https://github.com/rzr/webthing-iotjs/wiki/Kube>
 *   <https://github.com/the-benchmarker/web-frameworks/issues/1643> (Merged)
+*   <https://github.com/jerryscript-project/iotjs-modules/pull/2> (Merged)
