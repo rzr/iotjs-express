@@ -12,4 +12,4 @@ jobs:
       - uses: rzr/fediverse-action@master
         with:
           access-token: ${{ secrets.MASTODON_ACCESS_TOKEN }}
-          message: "https://github.com/${{ github.repository }}/commit/${{ steps.log.outputs.message }} ~ #FediVerseAction"
+          message: "https://github.com/${{ github.repository }}/commit/${{ steps.log.outputs.message }} ~ #IotJsExpress #FediVerseAction"
