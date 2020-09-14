@@ -13,7 +13,7 @@ set -e
 sudo sync
 
 sudo apt-get update -y
-sudo apt-get install -y base-files gnupg
+sudo apt-get install -y base-files curl gnupg
 
 apt-cache show iotjs || echo "TODO: iotjs is in debian:testing !"
 dpkg-architecture || :
