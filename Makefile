@@ -4,7 +4,7 @@
 # Copyright: 2018-present Samsung Electronics France SAS, and contributors
 
 default: help
-	@echo "# log: $@: $^"
+	-sync
 
 project?=iotjs-express
 example?=example/index.js
@@ -26,7 +26,14 @@ url?=http://${host}:${port}${endpoint}
 
 help:
 	@echo "## Usage:"
+	@echo "# make iotjs/setup"
+	@echo "# make iotjs/start"
+	@echo "# make node/start"
 	@echo "# make start"
+	@echo "# make lint"
+	@echo "# make check"
+	@echo "# make docker/run"
+
 
 setup/iotjs: extra/tools/iotjs/setup.sh
 	$<
@@ -71,7 +78,6 @@ iotjs/start: ${example}
 iotjs/debug: ${example}
 	node $<
 
-
 ${deploy_module_dir}/%: %
 	@echo "# TODO: minify: $<"
 	install -d ${@D}
@@ -114,3 +120,9 @@ demo:
 	curl -i ${url}
 	curl -i ${url}.well-known/security.txt
 	-curl -i ${url}favicon.ico
+
+docker/run: docker-compose.yml Dockerfile
+	docker-compose up
+
+vagran/run: Vagrantfile
+	$@ up
