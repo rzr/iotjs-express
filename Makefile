@@ -33,6 +33,7 @@ help:
 	@echo "# make lint"
 	@echo "# make check"
 	@echo "# make docker/run"
+	@echo "# make vagrant/run"
 
 
 setup/iotjs: extra/tools/iotjs/setup.sh
@@ -124,5 +125,5 @@ demo:
 docker/run: docker-compose.yml Dockerfile
 	docker-compose up
 
-vagran/run: Vagrantfile
-	$@ up
+vagrant/run: Vagrantfile
+	${@D} up
