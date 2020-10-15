@@ -80,7 +80,7 @@ Instead of porting the whole project to older ECMA standards,
 basic routing was re-implemented, and API tried to be preserved.
 
 Originally this module was done for "webthing-iotjs" project,
-a library to build webthings to connect to Mozilla's IoT gateway.
+a library to build webthings to connect to WebThingsIo gateway.
 
 Source file was bundled into project, but then pulled out as this standalone module,
 which can be used by both runtime Node.Js and IoT.js.
@@ -233,7 +233,7 @@ https://mastodon.social/@rzr/103595181296044323#webthing-iotjs-20180621rzr
 Demo also shows following systems:
 
 *   Edison: iotjs-express + webthing-iotjs on Jubilinux (Debian fork).
-*   RaspberryPi: mozilla-iot-gateway + express.js on Raspbian
+*   RaspberryPi: webthings-gateway + express.js on Raspbian
 *   Galaxy note: SamsungInternet web browser for Android.
 
 ## EXTRA EXAMPLES ##
