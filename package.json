@@ -5,7 +5,7 @@
   },
   "description": "Basic reimplementation of Express.js for IoT.js or Node",
   "devDependencies": {
-    "eslint": "^7.14.0"
+    "eslint": "^8.0.0"
   },
   "homepage": "https://mastodon.social/@rzr/104148998830650482#IotJsExpress#",
   "iotjs": {
